@@ -4,18 +4,18 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Terwist - terviseteadmised ja praktilised lahendused</title>
+<title>Tiina Tervisetuba | Terwist</title>
 
 <style>
 
 :root{
-    --pruun: #5C4033;
-    --liiv: #F5EEE6;
-    --savipruun: #B08968;
-    --paikeseloojang: #D97757;
-    --virsik: #F4C095;
-    --tekst: #3B312A;
-    --valge: #FFFFFF;
+    --dark:#5A4336;
+    --green:#8B9A78;
+    --sand:#F3E8DA;
+    --terracotta:#C9785C;
+    --gold:#D9A55A;
+    --light:#FCF9F5;
+    --text:#3B312A;
 }
 
 *{
@@ -24,82 +24,109 @@
     box-sizing:border-box;
 }
 
+html{
+    scroll-behavior:smooth;
+}
+
 body{
     font-family: "Segoe UI", Arial, sans-serif;
-    background: var(--liiv);
-    color: var(--tekst);
+    background:var(--light);
+    color:var(--text);
     line-height:1.7;
+}
+
+nav{
+    background:white;
+    padding:18px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:0 2px 10px rgba(0,0,0,0.05);
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.logo{
+    font-size:1.3rem;
+    font-weight:600;
+    color:var(--dark);
+}
+
+nav ul{
+    display:flex;
+    gap:25px;
+    list-style:none;
+}
+
+nav a{
+    color:var(--dark);
+    text-decoration:none;
+    font-weight:500;
 }
 
 header{
     background:
     linear-gradient(
-    rgba(92,64,51,0.75),
-    rgba(217,119,87,0.55)),
-    url("https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1600&q=80");
+        rgba(90,67,54,0.75),
+        rgba(201,120,92,0.45)
+    ),
+    url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1600&q=80');
 
     background-size:cover;
     background-position:center;
-
-    min-height:80vh;
+    min-height:85vh;
 
     display:flex;
-    justify-content:center;
     align-items:center;
+    justify-content:center;
     text-align:center;
+
     padding:40px;
     color:white;
 }
 
 .hero{
-    max-width:800px;
+    max-width:850px;
 }
 
-h1{
+.hero h1{
     font-size:4rem;
-    margin-bottom:20px;
+    margin-bottom:15px;
     font-weight:600;
+}
+
+.hero .subtitle{
+    font-size:1.15rem;
+    letter-spacing:2px;
+    margin-bottom:25px;
 }
 
 .hero p{
-    font-size:1.3rem;
-    margin-bottom:30px;
-}
-
-.btn{
-    display:inline-block;
-    padding:14px 28px;
-    background:var(--paikeseloojang);
-    color:white;
-    text-decoration:none;
-    border-radius:40px;
-    font-weight:600;
-}
-
-.btn:hover{
-    background:#C86446;
+    font-size:1.25rem;
 }
 
 section{
-    padding:80px 20px;
+    padding:90px 20px;
 }
 
 .container{
-    max-width:1100px;
+    max-width:1200px;
     margin:auto;
 }
 
 h2{
-    color:var(--pruun);
     text-align:center;
+    color:var(--dark);
     margin-bottom:40px;
-    font-size:2rem;
+    font-size:2.2rem;
 }
 
 .intro{
-    text-align:center;
-    max-width:800px;
+    max-width:850px;
     margin:auto;
+    text-align:center;
+    font-size:1.1rem;
 }
 
 .services{
@@ -110,25 +137,64 @@ h2{
 
 .card{
     background:white;
-    border-radius:15px;
+    border-radius:16px;
     padding:30px;
     box-shadow:0 5px 20px rgba(0,0,0,0.08);
-    border-top:5px solid var(--paikeseloojang);
+    border-top:6px solid var(--terracotta);
 }
 
 .card h3{
-    color:var(--pruun);
+    color:var(--dark);
     margin-bottom:15px;
 }
 
 .about{
-    background:white;
+    background:var(--sand);
 }
 
-.about-text{
-    max-width:800px;
+.about-content{
+    max-width:850px;
     margin:auto;
     text-align:center;
+}
+
+.photo-placeholder{
+    width:220px;
+    height:220px;
+    border-radius:50%;
+    margin:0 auto 30px auto;
+    background:#e7ddd3;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#777;
+    font-size:0.95rem;
+}
+
+details{
+    background:white;
+    max-width:800px;
+    margin:auto;
+    border-radius:12px;
+    padding:20px 25px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.08);
+}
+
+summary{
+    cursor:pointer;
+    font-size:1.1rem;
+    font-weight:600;
+    color:var(--dark);
+}
+
+.pricelist{
+    margin-top:20px;
+}
+
+.pricelist li{
+    padding:8px 0;
+    border-bottom:1px solid #eee;
+    list-style:none;
 }
 
 .contact{
@@ -136,48 +202,79 @@ h2{
 }
 
 .contact p{
-    margin:10px 0;
+    margin-bottom:10px;
+}
+
+.note{
+    margin-top:25px;
+    max-width:700px;
+    margin-left:auto;
+    margin-right:auto;
 }
 
 footer{
-    background:var(--pruun);
+    background:var(--dark);
     color:white;
     text-align:center;
-    padding:25px;
+    padding:35px 20px;
 }
 
 @media(max-width:768px){
 
-    h1{
-        font-size:2.6rem;
+    nav{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    nav ul{
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:15px;
+    }
+
+    .hero h1{
+        font-size:2.7rem;
     }
 
     .hero p{
         font-size:1.1rem;
     }
-
 }
 
 </style>
-
 </head>
 
 <body>
 
-<header>
+<nav>
+
+<div class="logo">
+Tiina Tervisetuba | Terwist
+</div>
+
+<ul>
+<li><a href="#avaleht">Avaleht</a></li>
+<li><a href="#teenused">Teenused</a></li>
+<li><a href="#tiinast">Tiinast</a></li>
+<li><a href="#hinnakiri">Hinnakiri</a></li>
+<li><a href="#kontakt">Kontakt</a></li>
+</ul>
+
+</nav>
+
+<header id="avaleht">
 
 <div class="hero">
 
-<h1>Terwist</h1>
+<h1>Tiina Tervisetuba</h1>
+
+<div class="subtitle">
+TERWIST
+</div>
 
 <p>
-Terviseteadmised ja praktilised lahendused
-parema enesetunde, tervise ja elukvaliteedi toetamiseks.
+Terviklikud terviseteenused keha ja meele toetamiseks.
 </p>
-
-<a href="mailto:info@terwist.eu" class="btn">
-Võta ühendust
-</a>
 
 </div>
 
@@ -190,17 +287,15 @@ Võta ühendust
 <h2>Tere tulemast</h2>
 
 <p>
-Terwist pakub teaduspõhist tervisenõustamist,
-toitumisnõustamist ning tervise edendamise teenuseid.
-Eesmärk on aidata inimestel teha tervislikke ja kestvaid valikuid,
-mis toetavad heaolu igas eluetapis.
+Tiina Tervisetuba pakub terviklikke terviseteenuseid keha ja meele toetamiseks.
+Meie spetsialistid aitavad leida tasakaalu, toetada taastumist ning kujundada tervislikke harjumusi, mis kestavad. Usume, et heaolu sünnib siis, kui inimene tunneb end tervikuna hoituna ja toetatuna.
 </p>
 
 </div>
 
 </section>
 
-<section>
+<section id="teenused">
 
 <div class="container">
 
@@ -209,34 +304,34 @@ mis toetavad heaolu igas eluetapis.
 <div class="services">
 
 <div class="card">
-<h3>Toitumisnõustamine</h3>
+<h3>Massaažid</h3>
 <p>
-Individuaalne nõustamine tervisliku toitumise ja
-toitumisharjumuste kujundamiseks.
+Lõõgastavad, taastavad ja tervist toetavad massaažid
+keha pingete leevendamiseks ning heaolu toetamiseks.
+</p>
+</div>
+
+<div class="card">
+<h3>Pereteraapia</h3>
+<p>
+Toetus suhete, suhtlemise ja eluliste väljakutsete
+mõtestamisel ning lahendamisel turvalises keskkonnas.
 </p>
 </div>
 
 <div class="card">
 <h3>Tervisenõustamine</h3>
 <p>
-Praktilised lahendused tervisekäitumise,
-heaolu ja elustiili parandamiseks.
+Toitumise, liikumise ja tervisekäitumise nõustamine,
+mis aitab kujundada tervist toetavaid harjumusi.
 </p>
 </div>
 
 <div class="card">
-<h3>Kehakoostise analüüs</h3>
+<h3>Personaaltreening</h3>
 <p>
-Ülevaade keha koostisest ning tulemuste
-professionaalne tõlgendamine.
-</p>
-</div>
-
-<div class="card">
-<h3>Koolitused ja loengud</h3>
-<p>
-Teaduspõhised koolitused ettevõtetele,
-haridusasutustele ja kogukondadele.
+Individuaalne juhendamine vastavalt eesmärkidele,
+tervislikule seisundile ja füüsilisele võimekusele.
 </p>
 </div>
 
@@ -246,21 +341,20 @@ haridusasutustele ja kogukondadele.
 
 </section>
 
-<section class="about">
+<section class="about" id="tiinast">
 
 <div class="container">
 
-<h2>Terwistist</h2>
+<h2>Tiinast</h2>
 
-<div class="about-text">
+<div class="about-content">
+
+<div class="photo-placeholder">
+Siia lisame hiljem foto
+</div>
 
 <p>
-Terwist ühendab teaduspõhised terviseteadmised,
-praktilised soovitused ja individuaalse lähenemise.
-
-Meie eesmärk on toetada inimesi terviseteekonnal,
-aidates leida lahendusi, mis sobivad just nende eluviisi,
-vajaduste ja eesmärkidega.
+Tiina Läänsoo on Tiina Tervisetoa eestvedaja. Tema töö ühendab inimese füüsilise, vaimse ja sotsiaalse heaolu toetamise. Terviklik lähenemine võimaldab leida lahendusi, mis arvestavad inimese vajadusi, võimalusi ja eesmärke.
 </p>
 
 </div>
@@ -269,23 +363,56 @@ vajaduste ja eesmärkidega.
 
 </section>
 
-<section class="contact">
+<section id="hinnakiri">
+
+<div class="container">
+
+<h2>Hinnakiri</h2>
+
+<details>
+
+<summary>Näita hinnakirja</summary>
+
+<ul class="pricelist">
+
+<li>Ajurveda massaaž - 55 €</li>
+<li>Kupumassaaž - 50 €</li>
+<li>Lümfimassaaž - 55 €</li>
+<li>Spordimassaaž - 60 €</li>
+<li>Tai massaaž - 60 €</li>
+<li>Yumeiho massaaž - 70 €</li>
+<li>Klassikaline Rootsi massaaž - 50 €</li>
+<li>Laavakivimassaaž - 65 €</li>
+<li>Jalatallamassaaž - 50 €</li>
+<li>Perenõustamine - 90 €</li>
+
+</ul>
+
+</details>
+
+</div>
+
+</section>
+
+<section id="kontakt" class="contact">
 
 <div class="container">
 
 <h2>Kontakt</h2>
 
-<p><strong>E-post:</strong> info@terwist.eu</p>
+<p>📍 J. Kunderi 35a, Tallinn</p>
 
-<p><strong>Telefon:</strong> lisa telefoninumber</p>
+<p>📞 +372 5660 4914</p>
 
-<p><strong>Asukoht:</strong> Eesti</p>
+<p>✉️ info@terwist.eu</p>
 
-<br>
+<p>📘 Facebook: Terwist</p>
 
-<a href="mailto:info@terwist.eu" class="btn">
-Saada päring
-</a>
+<div class="note">
+
+Aja kokkuleppimiseks palume võtta ühendust telefoni või e-posti teel. Leiame koos teile sobiva teenuse ja aja.
+
+</div>
 
 </div>
 
@@ -293,7 +420,8 @@ Saada päring
 
 <footer>
 
-© 2026 Terwist
+Tiina Tervisetuba | Terwist<br>
+© 2026 Kõik õigused kaitstud
 
 </footer>
 
