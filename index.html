@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Terwist - terviseteadmised ja praktilised lahendused</title>
+
+<style>
+
+:root{
+    --pruun: #5C4033;
+    --liiv: #F5EEE6;
+    --savipruun: #B08968;
+    --paikeseloojang: #D97757;
+    --virsik: #F4C095;
+    --tekst: #3B312A;
+    --valge: #FFFFFF;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: var(--liiv);
+    color: var(--tekst);
+    line-height:1.7;
+}
+
+header{
+    background:
+    linear-gradient(
+    rgba(92,64,51,0.75),
+    rgba(217,119,87,0.55)),
+    url("https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1600&q=80");
+
+    background-size:cover;
+    background-position:center;
+
+    min-height:80vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:40px;
+    color:white;
+}
+
+.hero{
+    max-width:800px;
+}
+
+h1{
+    font-size:4rem;
+    margin-bottom:20px;
+    font-weight:600;
+}
+
+.hero p{
+    font-size:1.3rem;
+    margin-bottom:30px;
+}
+
+.btn{
+    display:inline-block;
+    padding:14px 28px;
+    background:var(--paikeseloojang);
+    color:white;
+    text-decoration:none;
+    border-radius:40px;
+    font-weight:600;
+}
+
+.btn:hover{
+    background:#C86446;
+}
+
+section{
+    padding:80px 20px;
+}
+
+.container{
+    max-width:1100px;
+    margin:auto;
+}
+
+h2{
+    color:var(--pruun);
+    text-align:center;
+    margin-bottom:40px;
+    font-size:2rem;
+}
+
+.intro{
+    text-align:center;
+    max-width:800px;
+    margin:auto;
+}
+
+.services{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:white;
+    border-radius:15px;
+    padding:30px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.08);
+    border-top:5px solid var(--paikeseloojang);
+}
+
+.card h3{
+    color:var(--pruun);
+    margin-bottom:15px;
+}
+
+.about{
+    background:white;
+}
+
+.about-text{
+    max-width:800px;
+    margin:auto;
+    text-align:center;
+}
+
+.contact{
+    text-align:center;
+}
+
+.contact p{
+    margin:10px 0;
+}
+
+footer{
+    background:var(--pruun);
+    color:white;
+    text-align:center;
+    padding:25px;
+}
+
+@media(max-width:768px){
+
+    h1{
+        font-size:2.6rem;
+    }
+
+    .hero p{
+        font-size:1.1rem;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="hero">
+
+<h1>Terwist</h1>
+
+<p>
+Terviseteadmised ja praktilised lahendused
+parema enesetunde, tervise ja elukvaliteedi toetamiseks.
+</p>
+
+<a href="mailto:info@terwist.eu" class="btn">
+Võta ühendust
+</a>
+
+</div>
+
+</header>
+
+<section>
+
+<div class="container intro">
+
+<h2>Tere tulemast</h2>
+
+<p>
+Terwist pakub teaduspõhist tervisenõustamist,
+toitumisnõustamist ning tervise edendamise teenuseid.
+Eesmärk on aidata inimestel teha tervislikke ja kestvaid valikuid,
+mis toetavad heaolu igas eluetapis.
+</p>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="container">
+
+<h2>Teenused</h2>
+
+<div class="services">
+
+<div class="card">
+<h3>Toitumisnõustamine</h3>
+<p>
+Individuaalne nõustamine tervisliku toitumise ja
+toitumisharjumuste kujundamiseks.
+</p>
+</div>
+
+<div class="card">
+<h3>Tervisenõustamine</h3>
+<p>
+Praktilised lahendused tervisekäitumise,
+heaolu ja elustiili parandamiseks.
+</p>
+</div>
+
+<div class="card">
+<h3>Kehakoostise analüüs</h3>
+<p>
+Ülevaade keha koostisest ning tulemuste
+professionaalne tõlgendamine.
+</p>
+</div>
+
+<div class="card">
+<h3>Koolitused ja loengud</h3>
+<p>
+Teaduspõhised koolitused ettevõtetele,
+haridusasutustele ja kogukondadele.
+</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="about">
+
+<div class="container">
+
+<h2>Terwistist</h2>
+
+<div class="about-text">
+
+<p>
+Terwist ühendab teaduspõhised terviseteadmised,
+praktilised soovitused ja individuaalse lähenemise.
+
+Meie eesmärk on toetada inimesi terviseteekonnal,
+aidates leida lahendusi, mis sobivad just nende eluviisi,
+vajaduste ja eesmärkidega.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="contact">
+
+<div class="container">
+
+<h2>Kontakt</h2>
+
+<p><strong>E-post:</strong> info@terwist.eu</p>
+
+<p><strong>Telefon:</strong> lisa telefoninumber</p>
+
+<p><strong>Asukoht:</strong> Eesti</p>
+
+<br>
+
+<a href="mailto:info@terwist.eu" class="btn">
+Saada päring
+</a>
+
+</div>
+
+</section>
+
+<footer>
+
+© 2026 Terwist
+
+</footer>
+
+</body>
+</html>
